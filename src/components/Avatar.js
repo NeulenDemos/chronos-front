@@ -4,7 +4,7 @@ import {ReactComponent as DefaultAvatar} from "../assets/images/account_circle_b
 export const Avatar = ({avatar, size, username=null, padding=size / 2.8, rounded=true, units="px"}) => {
     let style = {};
     if (size)
-        style = {...style, height: `${size}${units}`, width: `${size}${units}`};
+        style = {...style, height: `${size}${units}`, width: `${size}${units}`, alignSelf: "center"};
     if (rounded)
         style = {...style, borderRadius: "999px"};
     if (avatar)
@@ -15,7 +15,7 @@ export const Avatar = ({avatar, size, username=null, padding=size / 2.8, rounded
             lt += username[1];
         else
             lt = lt.toUpperCase();
-        return (<div style={{...style, textAlign: "center", paddingTop: `${padding}${units}`, alignSelf: "center",
+        return (<div style={{...style, textAlign: "center", paddingTop: `${padding}${units}`,
             backgroundColor: `hsl(${(lt.charCodeAt(0) - 65) * 360 / 26}deg, 50%, 48%)`}}>
             <span style={{fontWeight: 500, lineHeight: 0, fontSize: `${size * 2 / 3}${units}`, color: "#fff", userSelect: "none"}}>{lt}</span>
         </div>);
