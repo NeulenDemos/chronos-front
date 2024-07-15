@@ -20,7 +20,7 @@ export const eventColorsLight = [
     "#9a9a9a"];
 
 export const appUrl = "https://chronos.neulen.dev" // process.env.APP_URL
-export const apiUrl = "https://chronos-back.vercel.app";
+export const apiUrl = "https://chronos-back.vercel.app/api";
 export const storageUrl = appUrl + "/storage";
 export const emailRegexp = /^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,64}$/g;
 export const passRegexp = /^.{8,}$/g;
